@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+RUN apt-get update && apt-get install firefox -y && groupadd -g 1000 james && useradd -d /home/james -s /bin/bash -m james -u 1000 -g 1000
+USER james
+ENV HOME /home/james
+CMD /usr/bin/firefox

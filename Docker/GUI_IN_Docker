@@ -1,0 +1,35 @@
+//Pull the imgae from docker registry 
+$ docker pull centos
+
+//run the docker container -it give you the terminal after 
+$ docker run -it --name=sample centos
+	$ yum install firefox -y
+	
+	[root@bd6fd4222354 /]# firefox
+Failed to open connection to "session" message bus: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Running without a11y support!
+
+(firefox:146): Gtk-WARNING **: 09:14:24.365: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Error: no DISPLAY environment variable specified
+[root@bd6fd4222354 /]# 
+
+
+in main system 
+mkdir sample
+cd sample
+//creating custome image
+vim Dockerfile
+
+FROM centos
+RUN yum install xeyes -y
+CMD ["/usr/bin/xeyes"]
+
+
+docker images
+docker build -t firefox .
+
+
+
+
+
