@@ -18,7 +18,8 @@ while True:
 	Press 2 : to cal
 	Press 3 : to ls
 	Press 4 : to mkdir
-	Press 5 : to exit
+	Press 5 : to ping
+	Press 6 : to exit
 	""")
 	if myhost == "remote":
 		print("enter ur choice : ", end='')
@@ -33,6 +34,8 @@ while True:
 		elif int(ch) == 4:
 			print("mkdir")
 		elif int(ch) == 5:
+			os.system("ping google.com")
+		elif int(ch) == 6:
 			exit()
 		else:
 			print("not supported")
