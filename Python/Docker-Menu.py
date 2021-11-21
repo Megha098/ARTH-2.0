@@ -28,8 +28,8 @@ while True:
 	print(ch)
 	if int(ch) == 1:
 		#Pull image
-        impImage = input("Please Enter the image name", end='')
-        os.system("sudo docker pull {}".format(impImage))    
+        	impImage = input("Please Enter the image name", end='')
+        	os.system("sudo docker pull {}".format(impImage))    
 	elif int(ch) == 2:
 		#List the image
 		os.system("sudo docker images")
